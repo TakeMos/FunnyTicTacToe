@@ -36,6 +36,8 @@
 		38EEF4BB2C80F6DF00014378 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38EEF4BA2C80F6DF00014378 /* FirebaseStorage */; };
 		38EEF4BD2C80F6DF00014378 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 38EEF4BC2C80F6DF00014378 /* FirebaseStorageCombine-Community */; };
 		38EEF4BF2C80F6DF00014378 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 38EEF4BE2C80F6DF00014378 /* FirebaseVertexAI-Preview */; };
+		38EEF4C12C8103C100014378 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C02C8103C100014378 /* SignUpView.swift */; };
+		38EEF4C42C8103E100014378 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C32C8103E100014378 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		38EEF4832C7F086900014378 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38EEF48C2C7F60D800014378 /* ModeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectView.swift; sourceTree = "<group>"; };
 		38EEF48E2C80F67700014378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38EEF4C02C8103C100014378 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		38EEF4C32C8103E100014378 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		38EEF48A2C7F08A600014378 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38EEF4C02C8103C100014378 /* SignUpView.swift */,
 				38EEF47E2C7F086800014378 /* LoginView.swift */,
 				38EEF48C2C7F60D800014378 /* ModeSelectView.swift */,
 			);
@@ -132,6 +137,7 @@
 		38EEF48B2C7F08B600014378 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38EEF4C32C8103E100014378 /* ViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EEF4C42C8103E100014378 /* ViewModel.swift in Sources */,
 				38EEF47F2C7F086800014378 /* LoginView.swift in Sources */,
+				38EEF4C12C8103C100014378 /* SignUpView.swift in Sources */,
 				38EEF47D2C7F086800014378 /* TicTacToeApp.swift in Sources */,
 				38EEF48D2C7F60D800014378 /* ModeSelectView.swift in Sources */,
 			);
