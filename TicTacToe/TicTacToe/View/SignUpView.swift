@@ -7,6 +7,7 @@ struct SignUpView: View {
     @State private var pwd: String = ""
     @State private var isAuth: Bool = false
     @State private var empty: Bool = true
+    @State private var name: String = ""
     
     var body: some View {
         NavigationStack {
@@ -15,6 +16,12 @@ struct SignUpView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    
+                    TextField("이름", text: $name)
+                        .padding()
+                        .frame(width: 294, height: 35)
+                        .background(.white)
+                        .clipShape(.rect(cornerRadius: 5))
                     
                     TextField("아이디를 입력해주세요", text: $id)
                         .padding()
@@ -31,7 +38,10 @@ struct SignUpView: View {
                         .padding(.bottom, 5)
                     
                     Button(action: {
-                        isAuth = true
+                        if id != "" && pwd != "" {
+                            isAuth = SignIn(id: id, pwd: pwd)
+                        }
+                        
                     }, label: {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.btn)
@@ -45,6 +55,20 @@ struct SignUpView: View {
             }
         }
         .navigationBarBackButtonHidden()
+    }
+    
+    func SignIn(id: String, pwd: String) -> Bool {
+        var isAuth: Bool = false
+        
+        Auth.auth().createUser(withEmail: id, password: pwd) { authResult, error in
+            if let error = error {
+                print("로그인 오류")
+            } else {
+                print("로그인 성공")
+                isAuth = true
+            }
+        }
+        return isAuth
     }
 }
 

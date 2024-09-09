@@ -38,6 +38,9 @@
 		38EEF4BF2C80F6DF00014378 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 38EEF4BE2C80F6DF00014378 /* FirebaseVertexAI-Preview */; };
 		38EEF4C12C8103C100014378 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C02C8103C100014378 /* SignUpView.swift */; };
 		38EEF4C42C8103E100014378 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C32C8103E100014378 /* ViewModel.swift */; };
+		38EEF4C72C8BF31600014378 /* dataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C52C8BF31600014378 /* dataModel.xcdatamodeld */; };
+		38EEF4C92C8BFB7C00014378 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4C82C8BFB7C00014378 /* CoreDataStack.swift */; };
+		38EEF4EA2C8EEDC700014378 /* MarkSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEF4E92C8EEDC700014378 /* MarkSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		38EEF48E2C80F67700014378 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38EEF4C02C8103C100014378 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		38EEF4C32C8103E100014378 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		38EEF4C62C8BF31600014378 /* dataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataModel.xcdatamodel; sourceTree = "<group>"; };
+		38EEF4C82C8BFB7C00014378 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		38EEF4E92C8EEDC700014378 /* MarkSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 				38EEF4C02C8103C100014378 /* SignUpView.swift */,
 				38EEF47E2C7F086800014378 /* LoginView.swift */,
 				38EEF48C2C7F60D800014378 /* ModeSelectView.swift */,
+				38EEF4E92C8EEDC700014378 /* MarkSelectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				38EEF4C32C8103E100014378 /* ViewModel.swift */,
+				38EEF4C52C8BF31600014378 /* dataModel.xcdatamodeld */,
+				38EEF4C82C8BFB7C00014378 /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,9 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EEF4C92C8BFB7C00014378 /* CoreDataStack.swift in Sources */,
 				38EEF4C42C8103E100014378 /* ViewModel.swift in Sources */,
+				38EEF4C72C8BF31600014378 /* dataModel.xcdatamodeld in Sources */,
 				38EEF47F2C7F086800014378 /* LoginView.swift in Sources */,
 				38EEF4C12C8103C100014378 /* SignUpView.swift in Sources */,
+				38EEF4EA2C8EEDC700014378 /* MarkSelectView.swift in Sources */,
 				38EEF47D2C7F086800014378 /* TicTacToeApp.swift in Sources */,
 				38EEF48D2C7F60D800014378 /* ModeSelectView.swift in Sources */,
 			);
@@ -587,6 +599,20 @@
 			productName = "FirebaseVertexAI-Preview";
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		38EEF4C52C8BF31600014378 /* dataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38EEF4C62C8BF31600014378 /* dataModel.xcdatamodel */,
+			);
+			currentVersion = 38EEF4C62C8BF31600014378 /* dataModel.xcdatamodel */;
+			name = dataModel.xcdatamodeld;
+			path = /Users/kimkanghyeok/xcodeProject/FunnyTicTacToe/TicTacToe/TicTacToe/Model/dataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 38EEF4712C7F086800014378 /* Project object */;
 }

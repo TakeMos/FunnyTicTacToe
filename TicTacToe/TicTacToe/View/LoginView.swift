@@ -1,17 +1,12 @@
-//
-//  ContentView.swift
-//  TicTacToe
-//
-//  Created by kim kanghyeok on 8/28/24.
-//
-
 import SwiftUI
+import FirebaseAuth
 
 struct LoginView: View {
     
     @State private var id: String = ""
     @State private var pwd: String = ""
     @State private var isSign: Bool = false
+    @State private var isLogin: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -45,6 +40,8 @@ struct LoginView: View {
                         .padding(.bottom, 5)
                     
                     Button(action: {
+                        isLogin = Login(id: id, pwd: pwd)
+                        
                     }, label: {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.btn)
@@ -52,6 +49,9 @@ struct LoginView: View {
                             .overlay(Text("로그인").font(.system(size: 20)).foregroundStyle(.black))
                     })
                     .padding(.bottom, 30)
+//                    .navigationDestination(isPresented: $isLogin) {
+//                        ModeSelectView(name: name)
+//                    }
                     ZStack {
                         Rectangle()
                             .frame(width: 294, height: 50)
@@ -75,6 +75,20 @@ struct LoginView: View {
                 .padding()
             }
         }
+    }
+    
+    func Login(id: String, pwd: String) -> Bool {
+        var isLogin: Bool = false
+        Auth.auth().signIn(withEmail: id, password: pwd) { authResult, error in
+            if let error = error {
+                print("로그인 실패: \(error)")
+            } else {
+                print("로그인 완료")
+                isSign = true
+            }
+        }
+        
+        return isSign
     }
 }
 

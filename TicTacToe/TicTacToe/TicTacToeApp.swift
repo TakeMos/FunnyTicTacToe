@@ -18,11 +18,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct TicTacToeApp: App {
+    @StateObject private var coreDataStack = CoreDataStack.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
             LoginView()
+                .environment(\.managedObjectContext, coreDataStack.persistentContainer.viewContext)
         }
     }
 }

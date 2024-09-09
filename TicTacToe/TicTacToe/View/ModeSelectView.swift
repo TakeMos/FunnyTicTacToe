@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ModeSelectView: View {
+//    @Binding var name: String
     @State private var name: String = ""
     
     var body: some View {
